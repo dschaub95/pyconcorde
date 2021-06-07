@@ -7,8 +7,8 @@ pyconcorde.egg-info
 data/
 build/
 
-valid_sets/
-test_sets/
+# valid_sets/**
+# test_sets/**
 plots/**
 
 /venv/
