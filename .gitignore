@@ -10,6 +10,7 @@ build/
 # valid_sets/**
 # test_sets/**
 plots/**
+!plots/.gitkeep
 
 /venv/
 
