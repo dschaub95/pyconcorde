@@ -1,9 +1,15 @@
 *.pyc
 concorde/_concorde.c
+concorde/*.so
+concorde.egg-info/
+pyconcorde.egg-info
 
 data/
 build/
-concorde.egg-info/
 
+valid_sets/**
+test_sets/**
+plots/**
 
 /venv/
+
