@@ -1,4 +1,6 @@
 *.pyc
+*.res
+
 concorde/_concorde.c
 concorde/*.so
 concorde.egg-info/
@@ -7,10 +9,22 @@ pyconcorde.egg-info
 data/
 build/
 
+LKH-3.0.6
+
 # valid_sets/**
-# test_sets/**
+test_sets/**
+training_sets/**
+!training_sets/.gitkeep
+
+valid_sets/**
+!valid_sets/.gitkeep
+
+
 plots/**
 !plots/.gitkeep
 
 /venv/
+
+s2v_dqn_results/**
+!s2v_dqn_results/.gitkeep
 
