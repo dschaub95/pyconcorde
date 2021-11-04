@@ -1,2 +1,9 @@
-cython
+pandas
+matplotlib
+seaborn
+scipy
+statsmodels
 numpy
+tsplib95
+notebook
+networkx
