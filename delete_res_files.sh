@@ -5,9 +5,9 @@ find . -name "*.res" -type f
 find . -name "*.res" -type f -delete
 
 
-find . -name "*.sol" -type f
+# find . -name "*.sol" -type f
 
-find . -name "*.sol" -type f -delete
+# find . -name "*.sol" -type f -delete
 
 find . -name "*.pul" -type f -delete
 
