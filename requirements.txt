@@ -7,3 +7,6 @@ numpy
 tsplib95
 notebook
 networkx
+jupyter
+cython
+tqdm
