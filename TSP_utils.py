@@ -368,6 +368,24 @@ class TSP_generator:
         print('Iterations: ', iter)     
         return graph, fitness, iter
     
+    def save_nx_as_tsp_single(self, graph, save_path, problem_name, scale=6, init_pos=None, goal_pos=None):
+        problem = tsplib95.models.StandardProblem()
+        problem.name = problem_name
+        problem.type = 'TSP'
+        problem.dimension = graph.number_of_nodes()
+        problem.edge_weight_type = 'EUC_2D'
+        # problem.node_coord_type = 'TWOD_COORDS'
+        if init_pos == '0,1' and goal_pos == '-0.5,0.5':
+            problem.node_coords = {'{}'.format(node[0]): list(np.round((10**scale)*(node[1]['coord']-0.5), 0)) for node in graph.nodes.items()}
+        else:
+            problem.node_coords = {'{}'.format(node[0]): list(np.round((10**scale)*node[1]['coord'], 0)) for node in graph.nodes.items()}
+        file_path = f"{save_path}/problem.tsp"
+        if not os.path.exists(save_path):
+            os.mkdir(save_path)
+        problem.save(file_path)
+        with open(file_path, 'a') as f:
+            f.write('\n')
+        
     def save_nx_as_tsp(self, graph_list, save_path, scale=6, start_index=0, init_pos=None, goal_pos=None):
         # make sure everything is saved in the save dir
         if save_path[-1] != '/':
