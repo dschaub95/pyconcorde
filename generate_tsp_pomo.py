@@ -32,7 +32,7 @@ if __name__ == "__main__":
         # generate instance
         graph = generator.gen_graph()
         # solve instance
-        length, sol_time, solution = solver.calc_opt_tour_from_nx(graph, scale=8)
+        length, sol_time, solution = solver.calc_opt_tour_from_nx(graph, scale=opts.scale_factor)
         # delete temp files
         solver.del_tmp_files()
         
